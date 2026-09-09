@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EY Labs // Emir & Yavuz — AI Builder & Vibe Coding Studio</title>
+  <meta name="description" content="EY Labs (Emir & Yavuz) - Yapay Zeka (AI) ve Vibe Coding ile Geliştirilen Android Native, Modern Web ve Siber Güvenlik Projeleri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Arka Plan Efekti -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Üst Gezinme Çubuğu (Navbar) -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-symbol">&lt;EY/&gt;</span>
+        <span class="logo-text">EY<span class="neon-dot">.</span>LABS</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#projects">Projeler</a>
+        <a href="#vibe-coding">Nasıl Geliştiriyoruz?</a>
+        <a href="#about-team">Ekip</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="soundToggleBtn" class="action-btn icon-btn" title="Ses Efektlerini Aç / Kapat">
+          <span id="soundIcon">🔊</span>
+          <span class="sound-label">Ses: Açık</span>
+        </button>
+        <a href="#projects" class="btn btn-primary btn-sm">Projeleri Gör</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Bölümü -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="status-indicator"></span>
+        <span>EY LABS • EMİR & YAVUZ • VIBE CODING DUO</span>
+      </div>
+
+      <h1 class="hero-title">
+        Yapay Zeka Gücüyle <br>
+        <span class="text-gradient">Fikirleri Ürüne Dönüştürüyoruz</span>
+      </h1>
+
+      <p class="hero-description">
+        <strong>Emir & Yavuz</strong> tarafından kurulan <strong>EY Labs</strong>; yapay zeka modellerini ve 
+        otonom kodlama ajanlarını (Vibe Coding & Prompt Engineering) yönlendirerek 
+        Android Native uygulamalar, siber güvenlik araçları ve yenilikçi web platformları inşa eden geliştirici ikilisidir.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>🚀 Geliştirdiğimiz Projeler</span>
+        </a>
+        <a href="#vibe-coding" class="btn btn-secondary">
+          <span>⚡ Vibe Coding Metodumuz</span>
+        </a>
+      </div>
+
+      <!-- İstatistik Sayaçları -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" data-target="4">4</div>
+          <div class="stat-label">Tamamlanan Proje</div>
+          <div class="stat-sub">Mobil & Web Ekosistemi</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="2">2</div>
+          <div class="stat-label">AI Builder Geliştirici</div>
+          <div class="stat-sub">Emir & Yavuz</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="100">100%</div>
+          <div class="stat-label">Cihaz İçi Gizlilik</div>
+          <div class="stat-sub">On-Device Processing</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="60">60 FPS</div>
+          <div class="stat-label">Pürüzsüz Deneyim</div>
+          <div class="stat-sub">Web Audio & 3D Fiziği</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projeler Bölümü -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">EY LABS VİTRİNİ</div>
+        <h2 class="section-title">Geliştirdiğimiz Uygulamalar</h2>
+        <p class="section-subtitle">
+          Emir ve Yavuz'un yapay zeka yönlendirmesiyle hayata geçirdiği, 
+          mobil işletim sistemi çekirdeğinden tarayıcı motorlarına kadar çalışan çözümler.
+        </p>
+      </div>
+
+      <!-- Filtreleme ve Arama Çubuğu -->
+      <div class="controls-bar">
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">Tümü (4)</button>
+          <button class="filter-btn" data-filter="android">📱 Android Native</button>
+          <button class="filter-btn" data-filter="web">💻 Modern Web</button>
+          <button class="filter-btn" data-filter="security">🛡️ Siber Güvenlik</button>
+          <button class="filter-btn" data-filter="ai">🎓 Yapay Zeka</button>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="projectSearchInput" placeholder="Proje adı veya teknoloji ara (örn: Kotlin, LSB, React)..." />
+        </div>
+      </div>
+
+      <!-- Proje Kartları Izgarası -->
+      <div class="projects-grid" id="projectsGrid">
+        
+        <!-- PROJE 1: SWIPE CLEAN -->
+        <article class="project-card" data-tags="android web" data-id="swipeclean">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="project-icon-box cyan">
+              <span>⚡</span>
+            </div>
+            <div class="card-badges">
+              <span class="badge badge-cyan">Kotlin Compose</span>
+              <span class="badge badge-purple">Web 3D Physics</span>
+            </div>
+          </div>
+
+          <h3 class="project-title">Swipe Clean</h3>
+          <p class="project-tagline">Tinder Tarzı Akıllı Galeri ve Depolama Temizleyici</p>
+          <p class="project-desc">
+            Fotoğraf ve videoları sağa kaydırarak saklayan, sola kaydırarak silinecekler sepetine atan; 
+            Scoped Storage ve Web Audio API ses çipiyle güçlendirilmiş galeri yöneticisi.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-pill">Kotlin</span>
+            <span class="tech-pill">Jetpack Compose</span>
+            <span class="tech-pill">Scoped Storage</span>
+            <span class="tech-pill">Web Audio API</span>
+            <span class="tech-pill">3D PointerEvents</span>
+          </div>
+
+          <div class="card-footer">
+            <div class="action-buttons">
+              <a href="apks/SwipeClean.apk" download="SwipeClean.apk" class="btn btn-primary btn-sm">
+                <span>📲 APK İndir</span>
+              </a>
+            </div>
+            <button class="details-link-btn" onclick="openProjectModal('swipeclean')">
+              Detayları İncele →
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJE 2: STEGOVAULT -->
+        <article class="project-card" data-tags="security web android" data-id="stegovault">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="project-icon-box purple">
+              <span>🛡️</span>
+            </div>
+            <div class="card-badges">
+              <span class="badge badge-purple">Steganografi</span>
+              <span class="badge badge-green">AES-256-GCM</span>
+            </div>
+          </div>
+
+          <h3 class="project-title">StegoVault</h3>
+          <p class="project-tagline">Siber Steganografi, Şifreleme ve Röntgen Analiz Aracı</p>
+          <p class="project-desc">
+            Fotoğrafların pikselleri (LSB) arasına gözle fark edilemeyecek gizli mesaj veya dosya 
+            gömen; askeri düzey parola koruması ve 64x piksel röntgen dedektifi sunan güvenlik platformu.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-pill">LSB Manipülasyon</span>
+            <span class="tech-pill">Web Crypto API</span>
+            <span class="tech-pill">Canvas Pixel Engine</span>
+            <span class="tech-pill">PBKDF2</span>
+            <span class="tech-pill">Steganaliz</span>
+          </div>
+
+          <div class="card-footer">
+            <div class="action-buttons">
+              <a href="apks/StegoVault.apk" download="StegoVault.apk" class="btn btn-primary btn-sm">
+                <span>📲 APK İndir</span>
+              </a>
+            </div>
+            <button class="details-link-btn" onclick="openProjectModal('stegovault')">
+              Detayları İncele →
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJE 3: AIRDROP LAN (FASTSHARE) -->
+        <article class="project-card" data-tags="android" data-id="fastshare">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="project-icon-box green">
+              <span>📡</span>
+            </div>
+            <div class="card-badges">
+              <span class="badge badge-green">AirDrop LAN</span>
+              <span class="badge badge-cyan">Foreground Service</span>
+            </div>
+          </div>
+
+          <h3 class="project-title">FastShare (AirDrop LAN)</h3>
+          <p class="project-tagline">Yerel Wi-Fi Üzerinden Kotasız Dosya ve Pano Aktarımı</p>
+          <p class="project-desc">
+            Android telefon ile PC/Mac arasında internet harcamadan, dahili gömülü HTTP sunucusu ve 
+            CameraX QR kod tarayıcı ile saniyeler içinde doğrudan dosya ve metin panosu eşitleyici.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-pill">Kotlin</span>
+            <span class="tech-pill">Gömülü HTTP Server</span>
+            <span class="tech-pill">CameraX QR Tarama</span>
+            <span class="tech-pill">Android Service</span>
+            <span class="tech-pill">Wi-Fi Direct P2P</span>
+          </div>
+
+          <div class="card-footer">
+            <div class="action-buttons">
+              <a href="apks/FastShare.apk" download="FastShare.apk" class="btn btn-primary btn-sm">
+                <span>📲 APK İndir</span>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openProjectModal('fastshare')">
+                <span>📖 Mimarisi</span>
+              </button>
+            </div>
+            <button class="details-link-btn" onclick="openProjectModal('fastshare')">
+              Detayları İncele →
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJE 4: EDUAI -->
+        <article class="project-card" data-tags="ai web android" data-id="eduai">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="project-icon-box amber">
+              <span>🎓</span>
+            </div>
+            <div class="card-badges">
+              <span class="badge badge-amber">AI Eğitim</span>
+              <span class="badge badge-cyan">React 18 + Capacitor</span>
+            </div>
+          </div>
+
+          <h3 class="project-title">EduAI</h3>
+          <p class="project-tagline">MEB Müfredatlı Yapay Zeka Destekli Sınav & Eğitim Asistanı</p>
+          <p class="project-desc">
+            Görsel soru çözücü, sözlü sınav simülatörü, sesli not alma, MEB kazanım takibi ve 
+            resmi EBA formatında PDF sertifika/karne üreten hibrit yapay zeka ekosistemi.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-pill">React 18</span>
+            <span class="tech-pill">Capacitor APK</span>
+            <span class="tech-pill">AI Vision Solver</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">PDF.js</span>
+            <span class="tech-pill">MEB Müfredat</span>
+          </div>
+
+          <div class="card-footer">
+            <div class="action-buttons">
+              <a href="apks/EduAI.apk" download="EduAI.apk" class="btn btn-primary btn-sm">
+                <span>📲 APK İndir</span>
+              </a>
+            </div>
+            <button class="details-link-btn" onclick="openProjectModal('eduai')">
+              Detayları İncele →
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Nasıl Geliştiriyoruz? (Vibe Coding & AI Builder Becerileri) -->
+  <section id="vibe-coding" class="tech-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">YENİ NESİL YAZILIM YAKLAŞIMI</div>
+        <h2 class="section-title">Nasıl Geliştiriyoruz? (Vibe Coding)</h2>
+        <p class="section-subtitle">
+          Emir ve Yavuz olarak manuel kod satırları arasında boğulmak yerine, yapay zeka modellerini 
+          yönlendirerek fikirlerimizi çalışan gerçek ürünlere dönüştürüyoruz.
+        </p>
+      </div>
+
+      <div class="stack-categories-grid">
+        <!-- 1. Prompt Mühendisliği -->
+        <div class="stack-card">
+          <div class="stack-card-icon">🧠</div>
+          <h3 class="stack-card-title">Prompt Mühendisliği</h3>
+          <p class="stack-card-desc">Yapay zekaya teknik vizyonu ve mimariyi net talimatlarla aktarma.</p>
+          <div class="skills-list">
+            <span class="skill-item">Mimari ve Sistem Tasarımı</span>
+            <span class="skill-item">Hassas Kod İstekleri & Kapsam Belirleme</span>
+            <span class="skill-item">Algoritmik Mantık Kurma (LSB, Soket)</span>
+            <span class="skill-item">Bağlam (Context) Yönetimi</span>
+          </div>
+        </div>
+
+        <!-- 2. Vibe Coding & Ajan Orkestrasyonu -->
+        <div class="stack-card">
+          <div class="stack-card-icon">⚡</div>
+          <h3 class="stack-card-title">Vibe Coding İkilisi</h3>
+          <p class="stack-card-desc">Fikirleri saatler içinde çalışan canlı prototiplere dönüştürme hızı.</p>
+          <div class="skills-list">
+            <span class="skill-item">Otonom Kodlama Ajanları Yönetimi</span>
+            <span class="skill-item">Hızlı İterasyon ve Canlı Deneme</span>
+            <span class="skill-item">Multi-Modal Girdi (Görsel & Ses)</span>
+            <span class="skill-item">Sıfır Blokaj ile Akıcı Üretim</span>
+          </div>
+        </div>
+
+        <!-- 3. Ürün & UI/UX Vizyonu -->
+        <div class="stack-card">
+          <div class="stack-card-icon">🎨</div>
+          <h3 class="stack-card-title">Ürün & UI/UX Vizyonu</h3>
+          <p class="stack-card-desc">Kullanıcının seveceği modern arayüzleri ve deneyimleri kurgulama.</p>
+          <div class="skills-list">
+            <span class="skill-item">Cyber Dark & Glassmorphism Tasarım</span>
+            <span class="skill-item">3D Kart Fiziği & Web Audio Geri Bildirimi</span>
+            <span class="skill-item">Kullanıcı Deneyimi Odaklı Akışlar</span>
+            <span class="skill-item">Mobil & Masaüstü Duyarlılık (Responsive)</span>
+          </div>
+        </div>
+
+        <!-- 4. Test, Derleme ve Çıktı -->
+        <div class="stack-card">
+          <div class="stack-card-icon">🚀</div>
+          <h3 class="stack-card-title">Doğrulama & APK Çıktısı</h3>
+          <p class="stack-card-desc">Yapay zekanın ürettiği kodları test edip telefona yüklenebilir hale getirme.</p>
+          <div class="skills-list">
+            <span class="skill-item">Android Studio & Gradle ile APK Derleme</span>
+            <span class="skill-item">Cihaz İçi Çalıştırma ve Hata Ayıklama</span>
+            <span class="skill-item">Kayıpsız Dosya ve Ağ Protokol Testleri</span>
+            <span class="skill-item">%100 Çevrimdışı Güvenlik Kontrolleri</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ekip Bölümü (About Team) -->
+  <section id="about-team" class="tech-section" style="border-top: none; padding-top: 40px;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">GELİŞTİRİCİLER</div>
+        <h2 class="section-title">EY Labs Kurucuları</h2>
+        <p class="section-subtitle">
+          Fikir aşamasından bitmiş APK paketine kadar birlikte çalışan Vibe Coding ikilisi.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 800px; margin: 0 auto;">
+        <div class="stack-card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 12px;">👨‍💻</div>
+          <h3 class="stack-card-title">Emir</h3>
+          <p class="project-tagline" style="margin-bottom: 8px;">Co-Founder & AI Builder</p>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            Yapay zeka modellerini ve ajanları yönlendirerek mimariyi kuran, sistem akışlarını tasarlayan Vibe Coder.
+          </p>
+        </div>
+
+        <div class="stack-card" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 12px;">👨‍💻</div>
+          <h3 class="stack-card-title">Yavuz</h3>
+          <p class="project-tagline" style="margin-bottom: 8px;">Co-Founder & AI Builder</p>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            Ürün fikirlerini geliştiren, özellikleri test eden ve kullanıcı deneyimini kusursuzlaştıran ortak mimar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim / Alt Bilgi (Footer) -->
+  <footer id="contact" class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="#hero" class="logo">
+          <span class="logo-symbol">&lt;EY/&gt;</span>
+          <span class="logo-text">EY<span class="neon-dot">.</span>LABS</span>
+        </a>
+        <p class="footer-desc">
+          Emir & Yavuz — Yapay zeka modellerini ve otonom kodlama araçlarını yönlendirerek ürün inşa eden AI Product Creator & Vibe Coder ikilisi.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hızlı Bağlantılar</h4>
+        <ul class="footer-links">
+          <li><a href="#projects">Projeler Vitrini</a></li>
+          <li><a href="#vibe-coding">Nasıl Geliştiriyoruz?</a></li>
+          <li><a href="#about-team">Ekip (Emir & Yavuz)</a></li>
+          <li><a href="#hero">Başa Dön</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-content">
+        <p>© 2026 EY Labs (Emir & Yavuz). Tüm hakları saklıdır. Cyber Clean & Glassmorphism Arayüzü.</p>
+        <a href="#hero" class="back-to-top" title="Yukarı Çık">↑ Başa Dön</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Detaylı Proje Modalı (Quickview Modal) -->
+  <div id="projectModal" class="modal-backdrop">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- JavaScript ile dinamik doldurulur -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Bildirimi -->
+  <div id="toastNotification" class="toast">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message">İşlem başarılı!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
