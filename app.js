@@ -90,7 +90,7 @@ const PROJECTS_DATA = {
   },
 
   nutriscan: {
-    title: "NutriScan",
+    title: "Temiz Tabak",
     tagline: "Akıllı Barkod Tarayıcı, Besin Değerleri ve Helal/Vegan Analiz Asistanı",
     icon: "🥗",
     category: "Mobil & Sağlık Teknolojileri",
@@ -106,7 +106,7 @@ const PROJECTS_DATA = {
     ],
     tech: ["Android Kotlin", "Jetpack Compose (Material 3)", "CameraX", "ML Kit Barcode", "OpenFoodFacts API", "Kotlin Coroutines & Flow", "Coil"],
     links: {
-      apk: "apks/NutriScan.apk"
+      apk: "apks/TemizTabak.apk"
     }
   }
 };
@@ -119,7 +119,7 @@ Aşağıda yerel geliştirme ortamımda sıfırdan geliştirdiğim 5 ana projeni
 2. STEGOVAULT: Görsellerin pikselleri (LSB) arasına askeri düzey (AES-256-GCM) veri gömen steganografi ve röntgen analiz aracı.
 3. AIRDROP LAN / FASTSHARE: İnternet kotası harcamadan yerel Wi-Fi üzerinden Android ve PC arasında dosya ve pano aktarımı yapan gömülü sunuculu Kotlin uygulaması.
 4. EDUAI: Görsel soru çözücü, sözlü sınav simülatörü, MEB müfredatı ve EBA uyumlu PDF sertifika üreten React 18 + Capacitor eğitim asistanı.
-5. NUTRISCAN: Kamera ile barkod okuyup 100g besin değerlerini, Nutri-Score, NOVA işlenme seviyesi, alerjen, E-kodları ve Helal/Vegan uygunluk analizini çıkaran Kotlin Jetpack Compose Android Native sağlık asistanı.
+5. TEMİZ TABAK: Kamera ile barkod okuyup 100g besin değerlerini, Nutri-Score, NOVA işlenme seviyesi, alerjen, E-kodları ve Helal/Vegan uygunluk analizini çıkaran Kotlin Jetpack Compose Android Native sağlık asistanı.
 
 Tüm projeler %100 çevrimdışı/güvenli, cihaz içi gizlilik odaklı ve yüksek performanslı mimarilerle geliştirilmiştir.`;
 
