@@ -283,66 +283,90 @@ function setupFiltering() {
 // 4. MODAL DETAY GÖRÜNÜMÜ
 // ==========================================
 function openProjectModal(projectId) {
-  const project = PROJECTS_DATA[projectId];
-  if (!project) return;
+  try {
+    const project = PROJECTS_DATA[projectId];
+    if (!project) {
+      console.warn("Proje bulunamadı:", projectId);
+      return;
+    }
 
-  sfx.playChime();
-  const modal = document.getElementById('projectModal');
-  const modalBody = document.getElementById('modalBody');
+    try { sfx.playChime(); } catch(e) {}
 
-  let apkBtn = '';
-  if (project.links.apk) {
-    apkBtn = `<a href="${project.links.apk}" download class="btn btn-primary">📲 Android APK İndir</a>`;
-  }
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('modalBody');
+    if (!modal || !modalBody) return;
 
-  modalBody.innerHTML = `
-    <div class="modal-header-top">
-      <div class="modal-icon">${project.icon}</div>
-      <div>
-        <h2 class="modal-title">${project.title}</h2>
-        <p class="modal-subtitle">${project.tagline}</p>
+    let apkBtn = '';
+    if (project.links && project.links.apk) {
+      apkBtn = `<a href="${project.links.apk}" download class="btn btn-primary">📲 Android APK İndir</a>`;
+    }
+
+    modalBody.innerHTML = `
+      <div class="modal-header-top">
+        <div class="modal-icon">${project.icon}</div>
+        <div>
+          <h2 class="modal-title">${project.title}</h2>
+          <p class="modal-subtitle">${project.tagline}</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card-badges" style="margin-bottom: 20px;">
-      ${project.badges.map(b => `<span class="badge badge-cyan">${b}</span>`).join('')}
-    </div>
+      <div class="card-badges" style="margin-bottom: 20px;">
+        ${project.badges.map(b => `<span class="badge badge-cyan">${b}</span>`).join('')}
+      </div>
 
-    <h4 class="modal-section-title">Mimari ve Çözülen Problem</h4>
-    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
-      ${project.description}
-    </p>
+      <h4 class="modal-section-title">Mimari ve Çözülen Problem</h4>
+      <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+        ${project.description}
+      </p>
 
-    <h4 class="modal-section-title">Öne Çıkan Özellikler & Fonksiyonlar</h4>
-    <ul class="modal-features-list">
-      ${project.features.map(f => `<li>${f}</li>`).join('')}
-    </ul>
+      <h4 class="modal-section-title">Öne Çıkan Özellikler & Fonksiyonlar</h4>
+      <ul class="modal-features-list">
+        ${project.features.map(f => `<li>${f}</li>`).join('')}
+      </ul>
 
-    <h4 class="modal-section-title">Kullanılan Teknolojiler</h4>
-    <div class="tech-tags">
-      ${project.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
-    </div>
+      <h4 class="modal-section-title">Kullanılan Teknolojiler</h4>
+      <div class="tech-tags">
+        ${project.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
+      </div>
 
-    <div class="modal-actions">
-      ${apkBtn}
-    </div>
-  `;
+      <div class="modal-actions">
+        ${apkBtn}
+      </div>
+    `;
 
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  } catch (err) {
+    console.error("Modal açılırken hata:", err);
+  }
 }
 
 function closeProjectModal() {
-  sfx.playClick();
-  const modal = document.getElementById('projectModal');
-  modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
+  try {
+    try { sfx.playClick(); } catch(e) {}
+    const modal = document.getElementById('projectModal');
+    if (modal) {
+      modal.classList.remove('active');
+    }
+    document.body.style.overflow = 'auto';
+  } catch (err) {
+    console.error("Modal kapatılırken hata:", err);
+  }
 }
 
+// Global window objesine bağlama
+window.openProjectModal = openProjectModal;
+window.closeProjectModal = closeProjectModal;
+
 // Modal dışına tıklayınca kapatma
-document.getElementById('projectModal').addEventListener('click', (e) => {
-  if (e.target.id === 'projectModal') {
-    closeProjectModal();
+document.addEventListener('DOMContentLoaded', () => {
+  const modalEl = document.getElementById('projectModal');
+  if (modalEl) {
+    modalEl.addEventListener('click', (e) => {
+      if (e.target.id === 'projectModal') {
+        closeProjectModal();
+      }
+    });
   }
 });
 
@@ -448,10 +472,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Detayları İncele butonlarına doğrudan click event listener bağlama
+  document.querySelectorAll('.details-link-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = btn.closest('.project-card');
+      const id = card ? card.getAttribute('data-id') : null;
+      if (id) {
+        openProjectModal(id);
+      }
+    });
+  });
+
   // Tıklamalarda hafif ses efekti
   document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('click', () => {
-      sfx.playClick();
+      try { sfx.playClick(); } catch(e) {}
     });
   });
 });
