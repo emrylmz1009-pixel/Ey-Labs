@@ -8,14 +8,14 @@
 // ==========================================
 const PROJECTS_DATA = {
   swipeclean: {
-    title: "Swipe Clean",
-    tagline: "Tinder Tarzı Akıllı Galeri & Video Temizleyici",
+    title: "SilGeç",
+    tagline: "Tinder Tarzı Akıllı Galeri & Alan Temizleyici",
     icon: "⚡",
     category: "Mobil & Modern Web",
     badges: ["Kotlin Compose", "Web 3D Physics", "Scoped Storage", "Web Audio API"],
     description: "Kullanıcıların telefonlarındaki gereksiz fotoğraf ve videoları eğlenceli ve sezgisel bir biçimde temizlemesini sağlayan, Scoped Storage mimarisi ve 3D kart fiziğiyle donatılmış modern bir depolama optimize edicisi.",
     features: [
-      "Tinder Tarzı 3D Kart Kaydırma: Sağa kaydır (Kalsın), Sola kaydır (Sil sepetine at). 60 FPS pürüzsüz PointerEvents desteği.",
+      "Tinder Tarzı 3D Kart Kaydırma: Sağa kaydır (Kalsın), Sola kaydır (SilGeç sepetine at). 60 FPS pürüzsüz PointerEvents desteği.",
       "Web Audio API Ses Sentezleyici: Sıfır MP3/WAV dosyasıyla doğrudan tarayıcı ses çipiyle üretilen neon swoosh ve zafer efektleri.",
       "Dahili Video Önizleyici: Desteye video geldiğinde anlık rozet gösterimi ve çift tıklamayla tam ekran oynatıcı.",
       "Kategorik Filtreleme: Ekran görüntüleri, büyük dosyalar (>3MB) ve videoları anında ayıklama.",
@@ -24,7 +24,7 @@ const PROJECTS_DATA = {
     ],
     tech: ["Android Kotlin", "Jetpack Compose", "HTML5", "CSS3 Glassmorphism", "ES6+ JavaScript", "Web Audio API", "Android MediaStore"],
     links: {
-      apk: "apks/SwipeClean.apk"
+      apk: "apks/SilGec.apk"
     }
   },
 
