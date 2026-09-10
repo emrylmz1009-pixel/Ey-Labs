@@ -87,19 +87,41 @@ const PROJECTS_DATA = {
     links: {
       apk: "apks/EduAI.apk"
     }
+  },
+
+  nutriscan: {
+    title: "NutriScan",
+    tagline: "Akıllı Barkod Tarayıcı, Besin Değerleri ve Helal/Vegan Analiz Asistanı",
+    icon: "🥗",
+    category: "Mobil & Sağlık Teknolojileri",
+    badges: ["Kotlin Compose", "CameraX Barkod", "OpenFoodFacts API", "Nutri-Score & NOVA"],
+    description: "Tükettiğiniz gıdaların barkodunu telefon kamerasıyla saniyeler içinde tarayarak 100g makro/mikro besin değerlerini döken, gıdanın ne kadar işlendiğini (NOVA), Nutri-Score kalite puanını ve otomatik vegan/helal uygunluk analizini sunan yerli Android Native sağlık asistanı.",
+    features: [
+      "CameraX & ML Kit ile Ultra Hızlı Barkod Okuma: Ürün ambalajındaki barkodu kameraya tuttuğunuz anda sıfır gecikmeyle yakalama ve çözümleme.",
+      "Kapsamlı 100g Besin Analizi: Kalori (kcal), Protein, Yağ, Doymuş Yağ, Karbonhidrat, Şeker, Lif ve Sodyum/Tuz oranlarını anlık görselleştirme.",
+      "Nutri-Score (A-E) & NOVA Sınıflandırması: Ürünün besin kalitesini ve işlenme derecesini (Grup 1 Doğal'dan Grup 4 Aşırı İşlenmiş'e) renkli göstergelerle sunma.",
+      "Yapay Zeka Destekli Vegan & Helal Analizi: İçindekiler listesini tarayarak hayvansal katkı, şüpheli emülgatör (E471, jelatin, karmin vb.) veya alkol riskini otomatik denetleme ve yüzde karnesi çıkarma.",
+      "Alerjen ve E-Kodu Rehberi: Üründeki alerjenleri ve E-numaralı katkı maddelerini sağlık risk seviyelerine göre listeleme.",
+      "OpenFoodFacts Küresel & Yerel Veritabanı Entegrasyonu: Milyonlarca market ürünü ve Türk markalarını içeren geniş ürün hafızası."
+    ],
+    tech: ["Android Kotlin", "Jetpack Compose (Material 3)", "CameraX", "ML Kit Barcode", "OpenFoodFacts API", "Kotlin Coroutines & Flow", "Coil"],
+    links: {
+      apk: "apks/NutriScan.apk"
+    }
   }
 };
 
 // Master Prompt Metni
 const MASTER_PROMPT_TEXT = `Sen kıdemli bir UI/UX tasarımcısı ve modern Frontend geliştiricisisin (Senior Full-Stack & Creative Developer).
-Aşağıda yerel geliştirme ortamımda sıfırdan geliştirdiğim 4 ana projenin mimarisi yer alıyor:
+Aşağıda yerel geliştirme ortamımda sıfırdan geliştirdiğim 5 ana projenin mimarisi yer alıyor:
 
 1. SWIPE CLEAN: Tinder tarzı akıllı galeri temizleyici. (Android Kotlin Compose + Web 3D PointerEvents & Web Audio API).
 2. STEGOVAULT: Görsellerin pikselleri (LSB) arasına askeri düzey (AES-256-GCM) veri gömen steganografi ve röntgen analiz aracı.
 3. AIRDROP LAN / FASTSHARE: İnternet kotası harcamadan yerel Wi-Fi üzerinden Android ve PC arasında dosya ve pano aktarımı yapan gömülü sunuculu Kotlin uygulaması.
 4. EDUAI: Görsel soru çözücü, sözlü sınav simülatörü, MEB müfredatı ve EBA uyumlu PDF sertifika üreten React 18 + Capacitor eğitim asistanı.
+5. NUTRISCAN: Kamera ile barkod okuyup 100g besin değerlerini, Nutri-Score, NOVA işlenme seviyesi, alerjen, E-kodları ve Helal/Vegan uygunluk analizini çıkaran Kotlin Jetpack Compose Android Native sağlık asistanı.
 
-Tüm projeler %100 çevrimdışı, cihaz içi gizlilik odaklı ve yüksek performanslı mimarilerle geliştirilmiştir.`;
+Tüm projeler %100 çevrimdışı/güvenli, cihaz içi gizlilik odaklı ve yüksek performanslı mimarilerle geliştirilmiştir.`;
 
 // ==========================================
 // 2. WEB AUDIO API SES MOTORU (SFX ENGINE)
