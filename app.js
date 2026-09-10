@@ -108,41 +108,18 @@ const PROJECTS_DATA = {
     links: {
       apk: "apks/NutriScan.apk"
     }
-  },
-
-  pricespy: {
-    title: "PriceSpy",
-    tagline: "Market Fiyat Karşılaştırma & İndirim Dedektifi",
-    icon: "🏷️",
-    category: "Mobil & Tüketici Teknolojileri",
-    badges: ["Kotlin Compose", "CameraX Lazer", "6 Market Kıyaslama", "Tasarruf & Sepet"],
-    description: "Süpermarket alışverişlerinde gizli zamları (shrinkflation) ve en uygun fiyatı anında tespit eden; BİM, A101, ŞOK, Migros, CarrefourSA ve Trendyol fiyatlarını canlı karşılaştırıp birim fiyat ve 3 aylık fiyat geçmişi grafiği sunan Native Android uygulaması.",
-    features: [
-      "CameraX & ML Kit Lazer Barkod Tarayıcı: Holografik lazer kılavuz ve flaş desteğiyle ürün barkodunu rafta anında tarama.",
-      "6 Zincir Market Karşılaştırması: BİM, A101, ŞOK, Migros, CarrefourSA ve Trendyol güncel fiyatlarını yan yana listeleyerek en ucuz marketi ve tasarruf tutarını gösterme.",
-      "Gizli Zam (Shrinkflation) Dedektifi: Paket gramajı düşüşlerini yakalamak için ₺/kg ve ₺/L bazında gerçek birim fiyat hesabı.",
-      "3 Aylık Fiyat Geçmişi Grafiği: Jetpack Compose Canvas ile çizilen interaktif trend grafiği sayesinde ürünün dip ve tavan fiyatlarını görme.",
-      "Fırsat Derecelendirme Rozeti: Ürünün son 3 aydaki fiyat ortalamasına göre 'Fırsat Fiyatı', 'Normal' veya 'Zamlı' olduğunu anında bildirme.",
-      "Akıllı Alışveriş Sepeti Simülatörü: Birden çok ürünü sepete ekleyerek tüm sepetin 6 farklı marketteki toplam tutarını ve marketler arası en yüksek kâr marjını hesaplama.",
-      "Geniş Dahili Katalog + OpenFoodFacts API: 25+ popüler yerel ürünün dahili hafızası ve milyonlarca küresel barkod desteği."
-    ],
-    tech: ["Android Kotlin", "Jetpack Compose (Material 3)", "CameraX", "ML Kit Barcode", "Compose Canvas API", "Coroutines & Flow", "OpenFoodFacts API"],
-    links: {
-      apk: "apks/PriceSpy.apk"
-    }
   }
 };
 
 // Master Prompt Metni
 const MASTER_PROMPT_TEXT = `Sen kıdemli bir UI/UX tasarımcısı ve modern Frontend geliştiricisisin (Senior Full-Stack & Creative Developer).
-Aşağıda yerel geliştirme ortamımda sıfırdan geliştirdiğim 6 ana projenin mimarisi yer alıyor:
+Aşağıda yerel geliştirme ortamımda sıfırdan geliştirdiğim 5 ana projenin mimarisi yer alıyor:
 
 1. SWIPE CLEAN: Tinder tarzı akıllı galeri temizleyici. (Android Kotlin Compose + Web 3D PointerEvents & Web Audio API).
 2. STEGOVAULT: Görsellerin pikselleri (LSB) arasına askeri düzey (AES-256-GCM) veri gömen steganografi ve röntgen analiz aracı.
 3. AIRDROP LAN / FASTSHARE: İnternet kotası harcamadan yerel Wi-Fi üzerinden Android ve PC arasında dosya ve pano aktarımı yapan gömülü sunuculu Kotlin uygulaması.
 4. EDUAI: Görsel soru çözücü, sözlü sınav simülatörü, MEB müfredatı ve EBA uyumlu PDF sertifika üreten React 18 + Capacitor eğitim asistanı.
 5. NUTRISCAN: Kamera ile barkod okuyup 100g besin değerlerini, Nutri-Score, NOVA işlenme seviyesi, alerjen, E-kodları ve Helal/Vegan uygunluk analizini çıkaran Kotlin Jetpack Compose Android Native sağlık asistanı.
-6. PRICESPY: Kamera ile barkod okuyup BİM, A101, ŞOK, Migros, CarrefourSA ve Trendyol fiyatlarını kıyaslayan, 3 aylık grafik, shrinkflation birim fiyat hesabı ve sepet optimizasyonu sunan Kotlin Jetpack Compose Native Android uygulaması.
 
 Tüm projeler %100 çevrimdışı/güvenli, cihaz içi gizlilik odaklı ve yüksek performanslı mimarilerle geliştirilmiştir.`;
 
