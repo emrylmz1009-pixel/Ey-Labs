@@ -9,13 +9,13 @@
 const PROJECTS_DATA = {
   swipeclean: {
     title: "SilGeç",
-    tagline: "Tinder Tarzı Akıllı Galeri & Alan Temizleyici",
+    tagline: "3D Kart Kaydırmalı Akıllı Galeri Temizleyici",
     icon: "⚡",
     category: "Mobil & Modern Web",
     badges: ["Kotlin Compose", "Web 3D Physics", "Scoped Storage", "Web Audio API"],
     description: "Kullanıcıların telefonlarındaki gereksiz fotoğraf ve videoları eğlenceli ve sezgisel bir biçimde temizlemesini sağlayan, Scoped Storage mimarisi ve 3D kart fiziğiyle donatılmış modern bir depolama optimize edicisi.",
     features: [
-      "Tinder Tarzı 3D Kart Kaydırma: Sağa kaydır (Kalsın), Sola kaydır (SilGeç sepetine at). 60 FPS pürüzsüz PointerEvents desteği.",
+      "Akıllı 3D Kart Kaydırma (Swipe): Sağa kaydır (Kalsın), Sola kaydır (SilGeç sepetine at). 60 FPS pürüzsüz PointerEvents desteği.",
       "Web Audio API Ses Sentezleyici: Sıfır MP3/WAV dosyasıyla doğrudan tarayıcı ses çipiyle üretilen neon swoosh ve zafer efektleri.",
       "Dahili Video Önizleyici: Desteye video geldiğinde anlık rozet gösterimi ve çift tıklamayla tam ekran oynatıcı.",
       "Kategorik Filtreleme: Ekran görüntüleri, büyük dosyalar (>3MB) ve videoları anında ayıklama.",
@@ -115,7 +115,7 @@ const PROJECTS_DATA = {
 const MASTER_PROMPT_TEXT = `Sen kıdemli bir UI/UX tasarımcısı ve modern Frontend geliştiricisisin (Senior Full-Stack & Creative Developer).
 Aşağıda yerel geliştirme ortamımda sıfırdan geliştirdiğim 5 ana projenin mimarisi yer alıyor:
 
-1. SWIPE CLEAN: Tinder tarzı akıllı galeri temizleyici. (Android Kotlin Compose + Web 3D PointerEvents & Web Audio API).
+1. SILGEC / SWIPE CLEAN: 3D kart kaydırmalı akıllı galeri temizleyici. (Android Kotlin Compose + Web 3D PointerEvents & Web Audio API).
 2. STEGOVAULT: Görsellerin pikselleri (LSB) arasına askeri düzey (AES-256-GCM) veri gömen steganografi ve röntgen analiz aracı.
 3. AIRDROP LAN / FASTSHARE: İnternet kotası harcamadan yerel Wi-Fi üzerinden Android ve PC arasında dosya ve pano aktarımı yapan gömülü sunuculu Kotlin uygulaması.
 4. EDUAI: Görsel soru çözücü, sözlü sınav simülatörü, MEB müfredatı ve EBA uyumlu PDF sertifika üreten React 18 + Capacitor eğitim asistanı.
